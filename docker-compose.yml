@@ -5,7 +5,7 @@ services:
     ports:
       - 19999:19999
     volumes:
-      - /var/run/docker.sock:/var/run/docker.so:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
     cap_add:
