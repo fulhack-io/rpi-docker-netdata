@@ -1,0 +1,12 @@
+version: '2'
+services:
+  netdata:
+    image: fulhackio/rpi-netdata
+    ports:
+      - 19999:19999
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.so:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+    cap_add:
+      - SYS_PTRACE
